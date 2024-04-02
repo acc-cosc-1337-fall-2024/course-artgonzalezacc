@@ -8,8 +8,8 @@ class BankAccount
 {
 
 public: //other regions of code, main, test, other function, another class can see the get_balance
-    BankAccount(){}//with no parameters-default synthesized constructor
-    BankAccount(int b) : balance(b)  {/*empty class function/method block*/ }
+    BankAccount(){std::cout<<"BankAccount Default constructor fired: \n";}//with no parameters-default synthesized constructor
+    BankAccount(int b) : balance(b)  {std::cout<<"BankAccount Constructor with balance parameter fired: \n";}
 
     int get_balance(){return balance;}
     void deposit(int amount);
