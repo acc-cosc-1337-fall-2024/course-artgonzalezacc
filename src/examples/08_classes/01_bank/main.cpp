@@ -5,17 +5,24 @@
 #include "savings_account.h"
 #include<iostream>
 #include<time.h>
+#include<vector>
 
-using std::cout;
+using std::cout; using std::vector;
 
 int main()
 {
+	vector<BankAccount> accounts;
+	
 	srand(time(NULL));
-	BankAccount account;
-	cout<<account.get_balance()<<"\n";
+	CheckingAccount checking;//0 balance
+	SavingsAccount savings;//0 balance
 
-	SavingsAccount savings;
-	cout<<savings.get_balance()<<"\n";
+	accounts.push_back(checking);
+	accounts.push_back(savings);
+	
+	cout<<accounts[0].get_balance()<<"\n";//checking 
+	cout<<accounts[1].get_balance()<<"\n";//savings
+
 
 	return 0;
 }
