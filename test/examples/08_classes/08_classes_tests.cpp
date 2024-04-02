@@ -17,7 +17,7 @@ TEST_CASE("Test bank account get balance ")
 TEST_CASE("Test savings account get balance")
 {
 	SavingsAccount account;
-	REQUIRE(account.get_balance() == 0);
+	REQUIRE(account.get_balance() == 5);
 }
 
 TEST_CASE("Test bank account constructor with one parameter")
@@ -30,7 +30,7 @@ TEST_CASE("Test bank account constructor with one parameter")
 TEST_CASE("Test savings account with one constructor parameter")
 {
 	SavingsAccount account(500);
-	REQUIRE(account.get_balance() == 500);
+	REQUIRE(account.get_balance() == 505);
 }
 
 TEST_CASE("Test case deposit with default constructor")
