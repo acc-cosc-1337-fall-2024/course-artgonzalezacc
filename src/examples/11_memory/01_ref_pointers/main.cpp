@@ -5,23 +5,15 @@ using std::cout;
 
 int main() 
 {
-	int num1 = 5;
-	int& num1_ref = num1;
+	int num1 = 5, num2 = 10;
+	int* num_ptr; //don't have to point to amything
+	num_ptr = &num1;
+	cout<<"Address of num1: "<<&num1<<"\n";
+	cout<<"Address that num_ptr points to: "<<num_ptr<<"\n";
+	cout<<"Value of the variable num_ptr points to: "<<*num_ptr<<"\n";
 
-	cout<<num1_ref<<"\n";
-	num1_ref = 10;
-
-	cout<<num1_ref<<"\n";
-
-	cout<<num1<<"\n";
-
-	int num2 = 5;
-	int* num2_ptr = &num2;
-	cout<<*num2_ptr<<"\n";
-
-	*num2_ptr = 10;
-	cout<<*num2_ptr<<"\n";
-	cout<<num2<<"\n";
+	num_ptr = &num2;
+	cout<<*num_ptr<<"\n";
 
 	
 	return 0;
