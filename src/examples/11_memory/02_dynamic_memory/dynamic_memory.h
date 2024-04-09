@@ -5,3 +5,4 @@
 
 
 void use_unique_ptr();
+void use_shared_ptr();
