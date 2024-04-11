@@ -13,14 +13,15 @@ iterate with auto
 
 int main() 
 {
-	Shape s;
-	s.draw();
+	Shape* s;//pointer to a Shape type that includes Circle and Line
 
 	Circle c;
-	c.draw();
+	s = &c;
+	s->draw();
 
 	Line l;
-	l.draw();
+	s = &l;
+	s->draw();
 
 	return 0;
 }
