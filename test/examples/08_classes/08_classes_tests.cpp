@@ -44,7 +44,7 @@ TEST_CASE("Test case deposit with default constructor")
 
 TEST_CASE("Test case with constructor")
 {
-	BankAccount account(500);
+	CheckingAccount account(500);
 	REQUIRE(account.get_balance() == 500);
 
 	account.deposit(100);
@@ -53,7 +53,7 @@ TEST_CASE("Test case with constructor")
 
 TEST_CASE("Test withdraw with default constructor")
 {
-	BankAccount account;
+	CheckingAccount account;
 	REQUIRE(account.get_balance() == 0);
 
 	account.deposit(100);
@@ -65,7 +65,7 @@ TEST_CASE("Test withdraw with default constructor")
 
 TEST_CASE("Test withdraw with begin balance 500")
 {
-	BankAccount account(500);
+	CheckingAccount account(500);
 	REQUIRE(account.get_balance() == 500);
 
 	account.withdraw(50);
@@ -74,7 +74,7 @@ TEST_CASE("Test withdraw with begin balance 500")
 
 TEST_CASE("Test withdraw more funds than balance")
 {
-	BankAccount account(100);
+	CheckingAccount account(100);
 	REQUIRE(account.get_balance() == 100);
 
 	account.withdraw(101);

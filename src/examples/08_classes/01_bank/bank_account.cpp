@@ -20,6 +20,10 @@ void BankAccount::withdraw(int amount)
     }
 }
 
+int BankAccount::get_balance()
+{
+    return balance;
+}
 
 
 
