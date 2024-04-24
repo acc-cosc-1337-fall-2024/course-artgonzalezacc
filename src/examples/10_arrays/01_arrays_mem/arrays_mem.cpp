@@ -33,3 +33,12 @@ void arrays_and_pointers()
     *ptr--;
     cout<<ptr<<" "<<*ptr<<"\n";
 }
+
+void display_array(int* nums, const int SIZE)
+{
+    for(auto i=0; i < SIZE; i++)
+    {
+        cout<<nums[i]<<"\n";
+    }
+}
+
