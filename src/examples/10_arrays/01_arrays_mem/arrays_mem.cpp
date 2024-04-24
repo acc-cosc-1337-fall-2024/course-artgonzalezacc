@@ -53,3 +53,17 @@ void populate_times_table(int times_table[][COLS], const int ROWS)
     }
 }
 
+
+void display_times_table(int times_table[][COLS], const int ROWS)
+{
+    for(auto i=0; i < ROWS; i++)
+    {
+        for(auto j=0; j < COLS; j++)
+        {
+            cout<<setw(5)<<times_table[i][j];
+        }
+
+        cout<<"\n";
+    }
+}
+
