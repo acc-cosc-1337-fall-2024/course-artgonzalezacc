@@ -9,4 +9,5 @@ const auto ROWS = 10;
 void use_stack_array();
 void arrays_and_pointers();
 void display_array(int* nums, const int SIZE);
+void populate_times_table(int times_table[][COLS], const int ROWS);
 
