@@ -11,6 +11,6 @@ Vector::Vector(int s)
 Vector::~Vector()
 {
     delete[] elements;
-    cout<<"Deleted memory at: "<<elements<<"\n";
+    cout<<"Deallocate memory at: "<<elements<<"\n";
 }
 
