@@ -8,7 +8,8 @@ class Vector
 {
 public:
     Vector(int size);//constructor Rule 1 of 3 Legacy C++
-    Vector(const Vector& v1);
+    Vector(const Vector& v1);//copy constructor Rule 2 of 3 legacy C++
+    Vector& operator=(const Vector& v1);
     int Size(){return size;}
     int Capacity(){return capacity;}
     int& operator[](int index){return elements[index];}
