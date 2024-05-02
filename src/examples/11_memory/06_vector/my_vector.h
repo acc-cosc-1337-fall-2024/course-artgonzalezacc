@@ -16,11 +16,15 @@ public:
     int Capacity(){return capacity;}
     int& operator[](int index){return elements[index];}
     int& operator[](int index)const{return elements[index];}
+    void Push_Back(int value);
     ~Vector();//Destructor
 private:
     int size{0};//keep track of the current index and the number of elements in the list
     int capacity; //the max number of elements the list can store
     int* elements; //list of elements in this vector
+    const int RESERVE_DEFAULT_SIZE{8};
+    const int RESERVE_DEFAULT_MULTIPLIER{2};
+    void Reserve(int new_size);
 };
 
 #endif
