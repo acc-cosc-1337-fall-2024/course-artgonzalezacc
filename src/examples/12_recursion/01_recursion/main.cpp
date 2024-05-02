@@ -5,11 +5,7 @@ using std::cout;
 
 int main() 
 {
-
-	while(true)
-	{
-		cout<<"Hello\n";
-	}
+	say_hello();
 		
 	return 0;
 }
