@@ -70,9 +70,38 @@ Vector::Vector(Vector&& v1)
     v1.size = 0;
 }
 
+/*
+1-Clear/delete original memory from v1
+2-Point v2 elements to v1 elements
+3-Get size from v2
+4-Point v2.elements to nullptr
+5-Set v2 size to 0
+6-return a self reference(pointer to v1)
+*/
+Vector& Vector::operator=(Vector&& v2)
+{
+    cout<<"Memory deallocated Move assignment "<<elements<<"\n";
+    delete[] elements;
+
+    elements = v2.elements;//switch pointers
+
+    cout<<"Memory pointer switched Move assignment "<<elements<<"\n";
+    size = v2.size;
+    v2.elements = nullptr;
+    v2.size = 0;
+    cout<<"Move constructor returning ...\n";
+    return *this;
+}
+
 Vector::~Vector()
 {
     cout<<"Deallocate memory at: "<<elements<<"\n";
     delete[] elements;
 }
 
+//free funtion NOT PART OF THE VECTOR class!!!!!
+Vector get_vector()
+{
+    Vector v(3);
+    return v;
+}
