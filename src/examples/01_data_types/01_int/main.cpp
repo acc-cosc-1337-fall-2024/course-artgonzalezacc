@@ -5,11 +5,11 @@ using std::cout;
 
 int main()
 {
-    int num = 5;
+    int num1 = 5, num2 = 5;
 
-    int result = echo_variable(num);
+    int result = add_numbers(num1, num2);
 
-    cout<<"Echo variable num value is: "<<num<<" result is "<<result;
+    cout<<"Result is "<<result;
 
     return 0;
 }
