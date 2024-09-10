@@ -16,3 +16,18 @@ int add_numbers(int num1, int num2)
 
     return result;
 }
+
+int divide_numbers(double num1, double num2)
+{
+    return num1 / num2;
+}
+
+double calculate_interest(double rate, int amount)
+{
+    return rate * amount;
+}
+
+int return_ascii_value(char ch)
+{
+    return ch;
+}

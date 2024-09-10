@@ -2,14 +2,18 @@
 #include "int.h"
 
 using std::cout;
+using std::cin;
 
 int main()
 {
-    int num1 = 5, num2 = 5;
+    char letter; //create a variable; don't have to provide a value/assign value
 
-    int result = add_numbers(num1, num2);
+    cout<<"Enter a letter: ";
+    cin>>letter;
 
-    cout<<"Result is "<<result;
+    int ascii = return_ascii_value(letter);
+
+    cout<<"ASCII value: "<<ascii<<"\n";
 
     return 0;
 }
