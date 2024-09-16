@@ -31,3 +31,8 @@ TEST_CASE("Test AND Truth Table one false negates result")
 {
 	REQUIRE(false == (true && true && true && true && false));
 }
+
+TEST_CASE("Test OR Truth Table one true makes result true")
+{
+	REQUIRE(true == (false || false || false || false ||  true));
+}
