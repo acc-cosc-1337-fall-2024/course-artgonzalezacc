@@ -1,9 +1,18 @@
 //write include statement for if header
+#include "if.h"
 
 
 
+bool is_vowel(char letter)
+{
+   return (letter == 'a' || letter == 'i' || letter == 'e' ||
+	                 letter == 'o' || letter == 'u');
+}
 
-//write code for function named overtime that accepts a double hours and returns true if 
-//hours over 40, false otherwise
+bool is_consonant(char letter)
+{
+    return !(letter == 'a' || letter == 'i' || letter == 'e' ||
+	                 letter == 'o' || letter == 'u');
+}
 
 
