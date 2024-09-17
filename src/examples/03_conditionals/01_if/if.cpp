@@ -15,4 +15,9 @@ bool is_consonant(char letter)
 	                 letter == 'o' || letter == 'u');
 }
 
+bool is_even(int num)
+{
+    return num % 2 == 0;
+}
+
 

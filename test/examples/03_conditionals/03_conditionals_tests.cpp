@@ -60,3 +60,12 @@ TEST_CASE("Determine if a letter is a consonant")
 	REQUIRE(true == is_consonant('z'));
 	
 }
+
+TEST_CASE("test is number even")
+{
+	REQUIRE(true == is_even(2));
+	REQUIRE(false == is_even(3));
+	REQUIRE(true == is_even(4));
+	REQUIRE(true == is_even(100));
+	REQUIRE(false == is_even(101));
+}
