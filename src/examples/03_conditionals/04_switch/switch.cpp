@@ -8,4 +8,31 @@
 //returns 'Option 3' when value 3
 //returns 'Option 4' when value 4
 //return 'Invalid Option' otherwise
+using std::string;
+
+string menu_options(int num)
+{
+    string option = "";
+
+    switch (num)
+    {
+    case 1://if or if else
+        option = "Option 1";
+        break;
+    case 2:
+        option = "Option 2";
+        break;
+    case 3:
+        option = "Option 3";
+        break;
+    case 4:
+        option = "Option 4";
+        break;
+    default: //else
+        option = "Invalid Option"; 
+        break;
+    }
+
+    return option;
+}
 

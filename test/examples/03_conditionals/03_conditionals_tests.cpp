@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "if.h"
 #include "if_else.h"
+#include "switch.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -82,4 +83,14 @@ TEST_CASE("Test get generation")
 	REQUIRE("Generation Z" == get_generation(2010));
 	REQUIRE("Generation Alpha" == get_generation(2020));
 	REQUIRE("Invalid Year" == get_generation(2030));
+}
+
+TEST_CASE("Test menu option")
+{
+	REQUIRE("Invalid Option" == menu_options(0));
+	REQUIRE("Option 1" == menu_options(1));
+	REQUIRE("Option 2" == menu_options(2));
+	REQUIRE("Option 3" == menu_options(3));
+	REQUIRE("Option 4" == menu_options(4));
+	REQUIRE("Invalid Option" == menu_options(5));
 }
