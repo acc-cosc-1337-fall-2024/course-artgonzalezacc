@@ -10,22 +10,24 @@
 //return 'Invalid Option' otherwise
 using std::string;
 
+enum menu_option {customers=1, payables, receivables, exit_p};
+
 string menu_options(int num)
 {
     string option = "";
 
     switch (num)
     {
-    case 1://if or if else
+    case customers://if or if else
         option = "Option 1";
         break;
-    case 2:
+    case payables:
         option = "Option 2";
         break;
-    case 3:
+    case receivables:
         option = "Option 3";
         break;
-    case 4:
+    case exit_p:
         option = "Option 4";
         break;
     default: //else
