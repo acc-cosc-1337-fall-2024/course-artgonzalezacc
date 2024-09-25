@@ -44,3 +44,22 @@ l
 
 */
 
+
+void while_nested_loop(int num1, int num2)
+{
+    auto i = 0;
+
+    while(i < num1)
+    {
+        cout<<"Outer Loop\n";
+        auto j = 0;
+
+        while(j < num1)
+        {
+            cout<<"\tInner Loop\n";
+            j++;
+        }
+
+        i++;
+    }
+}

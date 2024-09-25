@@ -4,13 +4,6 @@ using std::cout; using std::cin;
 
 int main() 
 {
-	auto value = 0;
-	cout<<"Enter a number: ";
-	cin>>value;
-
-	auto result = sum_of_squares(value);
-
-	cout<<"Sum: "<<result<<"\n";
-	
+	while_nested_loop(3, 3);	
 	return 0;
 }
