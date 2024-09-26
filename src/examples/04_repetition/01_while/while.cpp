@@ -1,6 +1,6 @@
 #include "while.h"
 
-using std::cout;
+using std::cout; using std::setw;
 
 //void means this function doesn't return a value
 void display_hello(int num)
@@ -60,6 +60,26 @@ void while_nested_loop(int num1, int num2)
             j++;
         }
 
+        i++;
+    }
+}
+
+void while_multiplication_table(int rows, int cols)
+{
+    auto i = 0;
+
+    while(i < rows)
+    {
+        auto j = 0;
+        
+        while(j < cols)
+        {
+            auto product = (i + 1) * (j + 1);
+            cout<<setw(4)<<product;
+            j++;
+        }
+
+        cout<<"\n";
         i++;
     }
 }

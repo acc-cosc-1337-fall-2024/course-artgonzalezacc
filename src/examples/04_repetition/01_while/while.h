@@ -1,5 +1,6 @@
 #include<string>
 #include<iostream>
+#include<iomanip>
 
 void display_hello(int num);
 
@@ -9,5 +10,7 @@ int sum_of_squares(int num);
 //write function prototype named display that accepts a string and returns void
 
 void while_nested_loop(int num1, int num2);
+
+void while_multiplication_table(int rows, int cols);
 
 

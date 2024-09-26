@@ -4,6 +4,6 @@ using std::cout; using std::cin;
 
 int main() 
 {
-	while_nested_loop(3, 3);	
+	while_multiplication_table(10,10);
 	return 0;
 }
