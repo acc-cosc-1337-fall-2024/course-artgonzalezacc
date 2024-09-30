@@ -1,6 +1,6 @@
 #include "for.h"
 
-using std::cout;
+using std::cout; using std::setw;
 
 void display_hello_for(int num)
 {
@@ -48,5 +48,18 @@ void nested_for_loop()
         {
             cout<<"\tInner loop\n";
         }
+    }
+}
+
+void for_multiplication(const int rows, const int cols)
+{
+    for(auto i=0; i < rows; i++)
+    {
+        for(auto j=0; j < cols; j++)
+        {
+            cout<<setw(4)<<(i + 1) * (j + 1);
+        }
+
+        cout<<"\n";
     }
 }

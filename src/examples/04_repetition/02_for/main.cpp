@@ -2,7 +2,7 @@
 
 int main() 
 {
-	nested_for_loop();
+	for_multiplication(10, 10);
 
 	return 0;
 }
