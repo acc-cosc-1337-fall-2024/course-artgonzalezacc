@@ -37,3 +37,16 @@ RESULT:
 
 */
 
+void nested_for_loop()
+{
+    auto const NUM = 3;
+
+    for(auto i=0; i < NUM; i++)
+    { 
+        cout<<"Outer loop\n";
+        for(auto j=0; j < NUM; j++)
+        {
+            cout<<"\tInner loop\n";
+        }
+    }
+}
