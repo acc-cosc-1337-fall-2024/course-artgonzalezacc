@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "reference.h"
+#include "default.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -12,4 +13,18 @@ TEST_CASE("Verify ref_param", "reference values")
 	ref_param(num);
 
 	REQUIRE(num == 10);
+}
+
+TEST_CASE("Test default params")
+{
+	REQUIRE(20 == get_total(2));
+	REQUIRE(50 == get_total());
+}
+
+TEST_CASE("Test default params (3)")
+{
+	REQUIRE(150 == get_total1());
+	REQUIRE(2100 == get_total1(200.0));//overrides first param
+	REQUIRE(1100 == get_total1(200.0, 5));
+	//REQUIRE(2100 == get_total1(200.0, , 200));can't override mid param w this format
 }
