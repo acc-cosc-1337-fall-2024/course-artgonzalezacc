@@ -6,22 +6,17 @@ using std::string;
 
 int main()
 {
-    string s0 = "initial string";
+    string lang = "C++";
+    auto num = 5;
 
-    string s1(s0, 8, 3);
-    cout<<s1<<"\n";
+    cout<<lang<<"\n";
+    cout<<"Address of lang: "<<&lang<<"\n";
+    cout<<"Address of num: "<<&num<<"\n\n";
 
-    string s2("another character sequence", 12);
-    cout<<s2<<"\n";
-
-    string s3(10, 'x');
-    cout<<s3<<"\n";
-
-    string s4(10, 42);//10 *
-    cout<<s4<<"\n";
-
-    string s5("123456abac**(**)");
-    cout<<s5<<"\n";
+    cout<<lang[0]<<"\n";
+    cout<<"Address of character at 0 index C: "<<static_cast<void*>(&lang[0])<<"\n";
+    cout<<"Address of character at 1 index +: "<<static_cast<void*>(&lang[1])<<"\n";
+    cout<<"Address of character at 2 index +: "<<static_cast<void*>(&lang[2])<<"\n";
 
     return 0;
 }
