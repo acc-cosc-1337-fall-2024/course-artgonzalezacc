@@ -1,36 +1,19 @@
-#include<vector>
 #include<iostream>
+#include<vector>
 
 using std::cout;
 using std::vector;
 
 int main()
 {
-    vector<int> nums{7, 4, 20};
-    vector<int> nums1;
-    nums1.push_back(25);
-    nums1.push_back(10);
+    vector<int> nums {1, 5, 3};
+    auto num = 5;
 
-    vector<int> nums2(5, 10);
+    cout<<"Address of lang: "<<&nums<<"\n";
+    cout<<"Address of num: "<<&num<<"\n\n";
 
-    for(auto num2: nums2)
-    {
-        cout<<num2<<"\n";
-    }
-    cout<<"\n";
-    vector<int> nums3 = nums;
-
-    for(auto num3: nums3)
-    {
-        cout<<num3<<"\n";
-    }
-
-    vector<double> doubles {5.5, 3.9, 8.99};
-    cout<<"\n";
-    for(auto dub: doubles)
-    {
-        cout<<dub<<"\n";
-    }
-
-    return 0;
+    cout<<nums[0]<<"\n";
+    cout<<"Address of character at 0 index value 1: "<<&nums[0]<<"\n";
+    cout<<"Address of character at 1 index value 5: "<<&nums[1]<<"\n";
+    cout<<"Address of character at 2 index value 3: "<<&nums[2]<<"\n";
 }
