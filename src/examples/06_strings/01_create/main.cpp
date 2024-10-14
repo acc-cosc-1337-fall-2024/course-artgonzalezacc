@@ -6,33 +6,22 @@ using std::string;
 
 int main()
 {
-    string lang = "C++";
+    string s0 = "initial string";
 
-    cout<<"size of lang: "<<lang.size()<<"\n";
-    cout<<"capacity of lang: "<<lang.capacity()<<"\n";
+    string s1(s0, 8, 3);
+    cout<<s1<<"\n";
 
-    lang.append("1");
-    lang.append("2");
-    lang.append("3");
-    lang.append("4");
-    lang.append("5");
+    string s2("another character sequence", 12);
+    cout<<s2<<"\n";
 
-    lang.append("6");
-    lang.append("7");
-    lang.append("8");
-    lang.append("9");
-    lang.append("0");
+    string s3(10, 'x');
+    cout<<s3<<"\n";
 
-    lang.append("1");
-    lang.append("2");
+    string s4(10, 42);//10 *
+    cout<<s4<<"\n";
 
-    cout<<"size of lang: "<<lang.size()<<"\n";
-    cout<<"capacity of lang: "<<lang.capacity()<<"\n";
-
-    lang.append("3");
-
-    cout<<"size of lang: "<<lang.size()<<"\n";
-    cout<<"capacity of lang: "<<lang.capacity()<<"\n";
+    string s5("123456abac**(**)");
+    cout<<s5<<"\n";
 
     return 0;
 }
