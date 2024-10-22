@@ -1,20 +1,30 @@
 #include "bank_account.h"
 #include <ctime> //guarantees a random number
+#include<vector>
 
-using std::cin; using std::cout;
+using std::cin; using std::cout; 
+using std::vector;
 
 int main()
 {
+	vector<Account> accounts;
 	auto balance = 0;
 	
 	cout<<"Enter amount: ";
 	cin>>balance;
 
-	Account account(balance);//represents a customer account
+	Account account1(balance);//represents a customer account
+	accounts.push_back(account1);
 
-	cout<<account.get_balance()<<"\n";
+	cout<<"Enter amount: ";
+	cin>>balance;
+	Account account2(balance);//represents a customer account
+	accounts.push_back(account2);
 
-	Account account1(500);//represents another customer's account
+	for(auto account: accounts)
+	{
+		cout<<account.get_balance()<<"\n";
+	}
 
 	return 0;
 }
