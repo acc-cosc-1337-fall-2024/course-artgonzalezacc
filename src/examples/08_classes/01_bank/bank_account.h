@@ -10,6 +10,7 @@ public:
     Account(int b) : balance(b){std::cout<<"Constructor w 1 param\n";} //constructor
     int get_balance() const{return balance;}//inline
     void deposit(int amount);
+    void withdraw(int amount);
 //by default all functions/variables are private
 private://access specifier
     int balance;
