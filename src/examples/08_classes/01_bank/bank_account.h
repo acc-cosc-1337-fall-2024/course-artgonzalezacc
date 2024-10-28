@@ -5,7 +5,7 @@
 //bank_account.h
 class Account
 {
-friend void display_balance(Account account);
+friend void display_balance(Account& account);
 
 public:
     Account(){std::cout<<"Default constructor\n"; get_balance_from_db(); }//default constructor - does nothing
