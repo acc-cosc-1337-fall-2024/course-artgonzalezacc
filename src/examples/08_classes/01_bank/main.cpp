@@ -4,7 +4,10 @@ using std::cin; using std::cout;
 
 int main()
 {
-	Account account(1000);
+	Account account;//object/instance (variable)
+	display_balance(account);
+
+/*	Account account(1000);
 	ATM atm(account);
 
 	atm.display_balance();
@@ -15,7 +18,7 @@ int main()
 	atm.make_withdraw();
 	atm.display_balance();
 
-	std::cout<<account.get_balance()<<"\n";
+	std::cout<<account.get_balance()<<"\n";*/
 
 	return 0;
 }
