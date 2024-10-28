@@ -7,6 +7,8 @@ int main()
 	Account account;//object/instance (variable)
 	display_balance(account);
 
+	cout<<"Main: "<<account.get_balance()<<"\n";
+
 /*	Account account(1000);
 	ATM atm(account);
 

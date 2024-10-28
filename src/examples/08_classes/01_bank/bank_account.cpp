@@ -27,5 +27,6 @@ void Account::withdraw(int amount)
 //FREE FUNCTIONS-NOT PART OF THE CLASS
 void display_balance(Account account)
 {
+    account.balance = 0;
     cout<<"friend function: "<<account.balance<<"\n";
 }
