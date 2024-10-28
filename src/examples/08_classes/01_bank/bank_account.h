@@ -1,6 +1,8 @@
 #include<iostream>
 #include <cstdlib> //access to rand
 
+#ifndef ACCOUNT_H
+#define ACCOUNT_H
 
 //bank_account.h
 class Account
@@ -18,3 +20,5 @@ private://access specifier
     int balance;
     void get_balance_from_db();
 };
+
+#endif
