@@ -16,6 +16,8 @@ public:
     void deposit(int amount);
     void withdraw(int amount);
 //by default all functions/variables are private
+protected:
+    int some_function(){}
 private://access specifier
     int balance;
     void get_balance_from_db();
