@@ -4,7 +4,8 @@ using std::cin; using std::cout;
 
 int main()
 {
-	Account account;//object/instance (variable)
+	Account account = get_account_by_value();
+
 	display_balance(account);
 
 	cout<<"Main: "<<account.get_balance()<<"\n";

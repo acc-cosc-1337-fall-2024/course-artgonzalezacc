@@ -24,3 +24,6 @@ private://access specifier
 };
 
 #endif
+
+//FREE FUNCTIONS-NOT PART OF THE CLASS!!!!!!
+Account get_account_by_value();
