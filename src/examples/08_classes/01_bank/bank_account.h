@@ -27,3 +27,4 @@ private://access specifier
 
 //FREE FUNCTIONS-NOT PART OF THE CLASS!!!!!!
 Account get_account_by_value();
+Account& get_account_by_reference();

@@ -4,7 +4,7 @@ using std::cin; using std::cout;
 
 int main()
 {
-	Account account = get_account_by_value();
+	Account& account = get_account_by_reference();
 
 	display_balance(account);
 
