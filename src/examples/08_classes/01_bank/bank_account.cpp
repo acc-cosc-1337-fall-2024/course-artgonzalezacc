@@ -13,6 +13,7 @@ void Account::deposit(int amount)
     if(amount > 0)
     {
         balance += amount;
+        bank_balance += amount;
     }
 }
 
@@ -21,6 +22,7 @@ void Account::withdraw(int amount)
     if(amount > 0 && amount <= balance)
     {
         balance -= amount;
+        bank_balance -= amount;
     }
 }
 
@@ -42,3 +44,5 @@ Account& get_account_by_reference()
     Account account;
     return account;
 }
+
+int Account::bank_balance = 100000;//initialize Account bank_balance

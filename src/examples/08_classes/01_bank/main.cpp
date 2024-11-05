@@ -13,6 +13,8 @@ int main()
 	cout<<"1 - Checking 2 - Savings";
 	cin>>account_index;
 	Account account = accounts[account_index - 1];
+
+	cout<<account.get_bank_balance()<<"\n";
 	ATM atm(account);
 
 	atm.display_balance();
@@ -25,5 +27,8 @@ int main()
 
 	std::cout<<account.get_balance()<<"\n";
 
+	cout<<account.get_bank_balance()<<"\n";
+	Account s = accounts[1];	
+	cout<<s.get_bank_balance()<<"\n";
 	return 0;
 }
