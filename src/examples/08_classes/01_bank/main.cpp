@@ -9,7 +9,15 @@ using std::vector;
 int main()
 {
 	auto account_index = 0;
-	vector<Account> accounts = {CheckingAccount(), SavingsAccount()};
+	Account account = SavingsAccount();
+	cout<<account.get_balance()<<"\n";
+	Account* account_ptr = &account;
+	cout<<account_ptr->get_balance()<<"\n";
+	SavingsAccount* savings_account_ptr = static_cast<SavingsAccount*>(account_ptr);
+	cout<<savings_account_ptr->get_balance()<<"\n";
+
+
+/*	vector<Account> accounts = {CheckingAccount(), SavingsAccount()};
 	cout<<"1 - Checking 2 - Savings";
 	cin>>account_index;
 	Account account = accounts[account_index - 1];
@@ -29,6 +37,6 @@ int main()
 
 	cout<<account.get_bank_balance()<<"\n";
 	Account s = accounts[1];	
-	cout<<s.get_bank_balance()<<"\n";
+	cout<<s.get_bank_balance()<<"\n";*/
 	return 0;
 }
