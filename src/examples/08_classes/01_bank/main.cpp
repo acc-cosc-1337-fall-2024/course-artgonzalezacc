@@ -8,13 +8,10 @@ using std::vector;
 
 int main()
 {
-	auto account_index = 0;
-	Account account = SavingsAccount();
-	cout<<account.get_balance()<<"\n";
-	Account* account_ptr = &account;
-	cout<<account_ptr->get_balance()<<"\n";
-	SavingsAccount* savings_account_ptr = static_cast<SavingsAccount*>(account_ptr);
-	cout<<savings_account_ptr->get_balance()<<"\n";
+	int* num = new int(10);
+	cout<<*num<<"\n";
+	delete num;
+	num = nullptr;
 
 
 /*	vector<Account> accounts = {CheckingAccount(), SavingsAccount()};
