@@ -10,16 +10,18 @@ using std::vector; using std::unique_ptr; using std::make_unique;
 
 int main()
 {
-	unique_ptr<Account> savings = make_unique<SavingsAccount>();
-	cout<<savings->get_balance()<<"\n";
+	auto account_index = 0;
 
-	unique_ptr<Account> checking = make_unique<CheckingAccount>();
-	cout<<checking->get_balance()<<"\n";
+	vector<unique_ptr<Account>> accounts;
+	accounts.push_back(make_unique<CheckingAccount>());
+	accounts.push_back(make_unique<SavingsAccount>());
 
-	/*	vector<Account> accounts = {CheckingAccount(), SavingsAccount()};
-	cout<<"1 - Checking 2 - Savings";
+	cout<<accounts[0]->get_balance()<<"\n";
+	cout<<accounts[1]->get_balance()<<"\n";
+
+	/*cout<<"1 - Checking 2 - Savings";
 	cin>>account_index;
-	Account account = accounts[account_index - 1];
+	Account account = *accounts[account_index - 1];
 
 	cout<<account.get_bank_balance()<<"\n";
 	ATM atm(account);
@@ -35,7 +37,7 @@ int main()
 	std::cout<<account.get_balance()<<"\n";
 
 	cout<<account.get_bank_balance()<<"\n";
-	Account s = accounts[1];	
+	Account s = *accounts[1];	
 	cout<<s.get_bank_balance()<<"\n";*/
 
 	return 0;
