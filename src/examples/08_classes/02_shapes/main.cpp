@@ -13,6 +13,14 @@ iterate with auto
 
 int main() 
 {
+	Line line;
+	Shape* shape = &line;
+	shape->draw();
+
+	Circle circle;
+	shape = &circle;
+	shape->draw();
+
 
 	return 0;
 }
