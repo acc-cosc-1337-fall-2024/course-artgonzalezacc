@@ -10,17 +10,21 @@ Create a Shape pointer of type Line
 Create vector of Shape pointers
 iterate with auto
 */
+using std::vector;
 
 int main() 
 {
 	Line line;
-	Shape* shape = &line;
-	shape->draw();
-
 	Circle circle;
-	shape = &circle;
-	shape->draw();
 
+	vector<Shape*> shapes;
+	shapes.push_back(&line);
+	shapes.push_back(&circle);
+
+	for(auto shape: shapes)
+	{
+		shape->draw();
+	}
 
 	return 0;
 }
