@@ -16,7 +16,8 @@ using std::unique_ptr; using std::make_unique;
 int main() 
 {
 	vector<unique_ptr<Shape>> shapes;
-	shapes.push_back(make_unique<Line>());//create Line on the heap
+	unique_ptr<Shape> line =  make_unique<Line>();
+	shapes.push_back(std::move(line));//create Line on the heap
 	shapes.push_back(make_unique<Circle>());//create Circle on the heap
 
 	for(auto& shape: shapes)
