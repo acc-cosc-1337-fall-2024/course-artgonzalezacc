@@ -15,15 +15,12 @@ using std::unique_ptr; using std::make_unique;
 
 int main() 
 {
-	vector<unique_ptr<Shape>> shapes;
-	unique_ptr<Shape> line =  make_unique<Line>();
-	shapes.push_back(std::move(line));//create Line on the heap
-	shapes.push_back(make_unique<Circle>());//create Circle on the heap
+	Circle circles[3];
 
-	for(auto& shape: shapes)
-	{
-		shape->draw();
-	}
+	circles[0].draw();
+	circles[1].draw();
+	circles[2].draw();
+
 
 	return 0;
 }
