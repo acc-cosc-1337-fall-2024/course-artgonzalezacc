@@ -29,4 +29,15 @@ void arrays_and_pointers()
 
     nums_ptr--;
     cout<<*nums_ptr<<"\n";
+
+    nums_ptr--;
+    cout<<*nums_ptr<<"\n";
+}
+
+void display_array_via_pointer(int* array, const int SIZE)
+{
+    for(auto i=0; i < SIZE; i++)
+    {
+        cout<<array[i]<<"\n";
+    }
 }
