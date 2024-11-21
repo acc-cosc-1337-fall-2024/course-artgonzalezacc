@@ -2,7 +2,7 @@
 
 int main()
 {
-	use_dynamic_memory_array(3);
+	use_dynamic_memory(3);
 	   
 	return 0;
 }
