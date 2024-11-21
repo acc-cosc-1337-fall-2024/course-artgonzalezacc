@@ -21,8 +21,12 @@ void arrays_and_pointers()
     cout<<nums<<"\n";
 
     int* nums_ptr = nums;
+    cout<<nums_ptr<<"\n";
     cout<<*nums_ptr<<"\n";
     
-    nums_ptr++; //jump 4 addresses
+    nums_ptr++; //jump 4 bytes
+    cout<<*nums_ptr<<"\n";
+
+    nums_ptr--;
     cout<<*nums_ptr<<"\n";
 }
