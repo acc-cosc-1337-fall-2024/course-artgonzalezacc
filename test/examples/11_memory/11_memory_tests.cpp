@@ -13,13 +13,19 @@ TEST_CASE("Verify Test Configuration", "verification") {
 
 	REQUIRE(vec1.Capacity() == vec2.Capacity());
 	REQUIRE(vec1.Size() == vec2.Size());
-}*/
+}
 
 TEST_CASE("Test class copy assignment")
 {
 	Vector v1(3);
 	Vector v2(3);
 	v2 = v1;//C++ doesn't know how to handle an equal sign with our class variables
+}*/
+
+TEST_CASE("Test my vector with std::move function")
+{
+	Vector v1(3);
+	Vector v2 = std::move(v1);
 }
 
 

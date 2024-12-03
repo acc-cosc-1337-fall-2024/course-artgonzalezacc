@@ -9,6 +9,7 @@ public:
     Vector(int s);//constructor
     Vector(const Vector& v);//copy constructor
     Vector& operator=(const Vector& v);//copy assignment
+    Vector(Vector&& v);//move constructor
     int Capacity(){return capacity;}
     int Size(){return size;}
     ~Vector();//destructor
