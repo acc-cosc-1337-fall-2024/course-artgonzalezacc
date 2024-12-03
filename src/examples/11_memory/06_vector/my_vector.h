@@ -11,6 +11,8 @@ public:
     Vector& operator=(const Vector& v);//copy assignment
     Vector(Vector&& v);//move constructor
     Vector& operator=(Vector&& v1);//move assignment
+    int& operator[](int index){return elements[index];}
+    int& operator[](int index)const{return elements[index];}    
     int Capacity(){return capacity;}
     int Size(){return size;}
     ~Vector();//destructor
