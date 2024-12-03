@@ -10,6 +10,7 @@ public:
     Vector(const Vector& v);//copy constructor
     Vector& operator=(const Vector& v);//copy assignment
     Vector(Vector&& v);//move constructor
+    Vector& operator=(Vector&& v1);//move assignment
     int Capacity(){return capacity;}
     int Size(){return size;}
     ~Vector();//destructor
@@ -22,3 +23,4 @@ private:
 
 //free function -NOT PART OF THE VECTOR CLASS
 void use_vector();
+Vector get_vector();

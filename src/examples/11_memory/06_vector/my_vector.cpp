@@ -54,6 +54,26 @@ Vector::Vector(Vector&& v1)
     v1.size = 0;
 }
 
+/*
+1-Clear/delete original memory from v1
+2-Point v2 elements to v1 elements
+3-Get size from v2
+4-Point v2.elements to nullptr
+5-Set v2 size to 0
+6-return a self reference(pointer to v1)
+*/
+Vector& Vector::operator=(Vector&& v2)
+{
+    cout<<"Move assignment-Delete memory "<<elements<<"\n";
+    delete[] elements;
+    elements = v2.elements;
+    cout<<"Move assignment-Memory pointer switched "<<elements<<"\n";
+    size = v2.size;
+    v2.elements = nullptr;
+    v2.size = 0;
+    return *this;
+}
+
 Vector::~Vector()
 {
     std::cout<<"Destructor deleting memory at "<<elements<<"\n";
@@ -64,5 +84,11 @@ Vector::~Vector()
 void use_vector()
 {
     Vector nums(3);
+}
+
+Vector get_vector()
+{
+    Vector nums(3);
+    return nums;
 }
 
