@@ -14,12 +14,17 @@ public:
     int& operator[](int index){return elements[index];}
     int& operator[](int index)const{return elements[index];}    
     int Capacity(){return capacity;}
+    void Push_Back(int value);
     int Size(){return size;}
     ~Vector();//destructor
 private:
     int size{0};
     int capacity;
     int* elements;
+    const int RESERVE_DEFAULT_SIZE{8};
+    const int RESERVE_DEFAULT_MULTIPLIER{2};
+    void Reserve(int new_size);
+
 };
 #endif
 
